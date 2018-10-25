@@ -1,0 +1,24 @@
+.white-anchor {
+    color: white;
+}
+
+.banner-title {
+    position: absolute;
+    top: 25%;
+    left: 19%;
+    width: auto;
+    height: auto;
+    
+}
+
+.ui.segment.landscape-banner {
+    padding: 0em;
+}
+
+.centered.grid, .ui.large.header {
+    margin-top: 30px;
+}
+
+.ui.huge.header{
+    font-size: 5em;
+}

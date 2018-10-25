@@ -1,0 +1,65 @@
+<% include ./partials/header %>
+
+<div class="ui text container">
+        <div class="ui large header">Add Syntax</div>
+
+        <form class="ui form" action="/syntakes" method="POST">
+            <div class="field">
+                <label>Method</label>
+                <input type="text" name="syntake[method]" placeholder="Method">
+            </div>
+            <div class="field">
+                <label>Syntax</label>
+                <input type="text" name="syntake[syntax]" placeholder="Syntax">
+            </div>
+
+            <div class="fields">
+                <div class="field">
+                    <label>1st Parameter</label>
+                    <input type="text" name="syntake[parameter][first]" placeholder="searchString - A string to be searched for within this string.">
+                </div>
+                <div class="field">
+                    <label>2nd Parameter</label>
+                    <input type="text" name="syntake[parameter][second]" placeholder="position(optional) - The position within the string at which to begin searching for searchString. (defaults to 0). ">
+                </div>
+                <div class="field">
+                    <label>3rd Parameter</label>
+                    <input type="text" name="syntake[parameter][third]" placeholder="3rd Parameter">
+                </div>
+                <div class="field">
+                    <label>4th Parameter</label>
+                    <input type="text" name="syntake[parameter][fourth]" placeholder="4th Parameter">
+                </div>
+            </div>
+            
+            <div class="field">
+                <label>Example</label>
+                <div class="fields">
+                    <div class="field">
+                        <div class="ui right labeled input">
+                            <input type="text" name="syntake[example][value]" placeholder="Syntax with values">
+                            <div class="ui label icon">
+                                <i class="caret square right icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="syntake[example][result]" placeholder="result">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label>Notes</label>
+                <input type="text" name="syntake[notes]" placeholder="Notes">
+            </div>
+            <div class="field">
+                <label>Data Types</label>
+                <input type="text" name="syntake[type]" placeholder="Where applicable">
+            </div>        
+
+            <button class="ui basic teal button">Add to Table</button>
+        </form>
+    </div>
+
+<% include ./partials/footer %>

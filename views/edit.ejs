@@ -1,0 +1,65 @@
+<% include ./partials/header %>
+
+<div class="ui text container">
+        <div class="ui large header">Edit Syntax</div>
+
+        <form class="ui form" action="/syntakes/<%= syntake._id %>?_method=PUT" method="POST">
+            <div class="field">
+                <label>Method</label>
+                <input type="text" name="syntake[method]" value="<%= syntake.method %>">
+            </div>
+            <div class="field">
+                <label>Syntax</label>
+                <input type="text" name="syntake[syntax]" value="<%= syntake.syntax %>">
+            </div>
+
+            <div class="fields">
+                <div class="field">
+                    <label>1st Parameter</label>
+                    <input type="text" name="syntake[parameter][first]" value="<%= syntake.parameter.first %>">
+                </div>
+                <div class="field">
+                    <label>2nd Parameter</label>
+                    <input type="text" name="syntake[parameter][second]" value="<%= syntake.parameter.second %>">
+                </div>
+                <div class="field">
+                    <label>3rd Parameter</label>
+                    <input type="text" name="syntake[parameter][third]" value="<%= syntake.parameter.third %>">
+                </div>
+                <div class="field">
+                    <label>4th Parameter</label>
+                    <input type="text" name="syntake[parameter][fourth]" value="<%= syntake.parameter.fourth %>">
+                </div>
+            </div>
+            
+            <div class="field">
+                <label>Example</label>
+                <div class="fields">
+                    <div class="field">
+                        <div class="ui right labeled input">
+                            <input type="text" name="syntake[example][value]" value="<%= syntake.example.value %>">
+                            <div class="ui label icon">
+                                <i class="caret square right icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="syntake[example][result]" value="<%= syntake.example.result %>">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label>Notes</label>
+                <input type="text" name="syntake[notes]" value="<%= syntake.notes %>">
+            </div>
+            <div class="field">
+                <label>Data Types</label>
+                <input type="text" name="syntake[type]" value="<%= syntake.type %>">
+            </div>        
+
+            <button class="ui basic teal button">Save Changes to Table</button>
+        </form>
+    </div>
+
+<% include ./partials/footer %>

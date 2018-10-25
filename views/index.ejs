@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+
+<div class="ui segment landscape-banner">
+    <img class="ui image" src="stylesheets/shibaBanner.jpg">
+    <div class="banner-title">
+        <div class="ui huge header">SYNTAKES</div>
+        <div class="subheader">Like Cakes - But Better</div>
+    </div>
+</div>
+
+<div class="ui centered grid">
+    
+    <div class="ten wide column">
+        <button class="ui teal button fluid"><a class="white-anchor" href="/syntakes/new">Add Syntax</a></button>
+        <table class="ui celled fluid center aligned table">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% syntakes.forEach( function(syntake) { %>
+                    <tr>
+                        <td><a href="/syntakes/<%= syntake._id %>/edit"><%= syntake.method %></a></td>
+                        <td><%= syntake.syntax %></td>
+                        <td><%= syntake.example.value %>
+                            <i class="caret square right icon"></i>
+                            <%= syntake.example.result %>
+                        </td>
+                        <td><%= syntake.notes %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<% include ./partials/footer %>
